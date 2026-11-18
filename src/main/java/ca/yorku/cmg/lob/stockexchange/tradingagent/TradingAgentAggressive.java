@@ -1,3 +1,16 @@
+/**
+ * 
+ * 
+ * 
+	ELIMINATE ALL
+*
+ */
+ 
+ 
+ 
+ 
+ 
+ 
 package ca.yorku.cmg.lob.stockexchange.tradingagent;
 
 import ca.yorku.cmg.lob.orderbook.Ask;
@@ -19,7 +32,7 @@ public class TradingAgentAggressive extends TradingAgent {
 		super(t, e, n);
 	}
 
-	@Override
+	
 	protected void actOnEvent(Event e, int pos, int price) {
 
 		IOrder newOrder = null;

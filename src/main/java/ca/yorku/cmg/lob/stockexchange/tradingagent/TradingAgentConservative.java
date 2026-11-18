@@ -1,3 +1,15 @@
+/**
+ * 
+ * 
+ * 
+	ELIMINATE ALL
+*
+ */
+
+
+
+
+
 package ca.yorku.cmg.lob.stockexchange.tradingagent;
 
 import ca.yorku.cmg.lob.orderbook.Bid;

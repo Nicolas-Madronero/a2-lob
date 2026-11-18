@@ -12,9 +12,33 @@ public abstract class TradingAgent {
 	protected Trader t;
 	protected StockExchange exc;
 	protected NewsBoard news;
-	
-	/**
-	 * Constructor
+
+	// Modification: 
+		// Reference to interface
+		protected ITradingStrategy strategy;
+
+		// Methods: 
+		// Strategy setter: 
+		public void setTradingStrategy(ITradingStrategy strategy) {
+			this.strategy = strategy;
+		}
+		// Wrapper method to call the strategy's actOnEvent method
+		public void doAction(Trader t, Event e, int pos, int price) {
+			if (strategy != null) {
+				strategy.actOnEvent(this, e, pos, price);
+			} else {
+				System.out.println("No trading strategy set.");
+			}
+		}
+		//Auxiliar getters: 
+		public Trader getTrader(){
+			return t;
+		}
+		public StockExchange getStockExchange(){
+			return exc;
+		}
+	// Modification
+	/* Constructor
 	 * @param t The {@linkplain Trader} object associated with the agent.
 	 * @param e The {@linkplain StockExchange} object at which the agent has an account and trades in. 
 	 * @param n The {@linkplain NewsBoard} object that generates news events.
@@ -40,7 +64,7 @@ public abstract class TradingAgent {
 	private void examineEvent(Event e) {
 		int positionInSecurity = exc.getAccounts().getTraderAccount(t).getPosition(e.getSecrity().getTicker());
 		if (positionInSecurity > 0) {
-			actOnEvent(e,positionInSecurity,exc.getPrice(e.getSecrity().getTicker()));
+			strategy.actOnEvent(this, e, positionInSecurity, exc.getPrice(e.getSecrity().getTicker()));
 		}
 	}
 
@@ -64,9 +88,11 @@ public abstract class TradingAgent {
 	 * @param pos The position (number of units) of the trader to the ticker that is mentioned in the Event.
 	 * @param price The current price of the relevant ticker. 
 	 */
+
+	/**To eliminate 
 	protected abstract void actOnEvent(Event e, int pos, int price);
 	
-	
+	*/
 	
 
 }
