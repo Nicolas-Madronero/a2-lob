@@ -1,17 +1,9 @@
-import ca.yorku.cmg.lob.stockexchange.tradingagent.TradingAgent;
-
-import ca.yorku.cmg.lob.stockexchange.tradingagent.ITradingStrategy;
-
-import ca.yorku.cmg.lob.stockexchange.events.Event;
-
+package ca.yorku.cmg.lob.stockexchange.tradingagent;
 import ca.yorku.cmg.lob.orderbook.Ask;
 import ca.yorku.cmg.lob.orderbook.Bid;
-import ca.yorku.cmg.lob.stockexchange.StockExchange;
 import ca.yorku.cmg.lob.stockexchange.events.BadNews;
 import ca.yorku.cmg.lob.stockexchange.events.Event;
 import ca.yorku.cmg.lob.stockexchange.events.GoodNews;
-import ca.yorku.cmg.lob.stockexchange.events.NewsBoard;
-import ca.yorku.cmg.lob.trader.Trader;
 import ca.yorku.cmg.lob.tradestandards.IOrder;
 
 
